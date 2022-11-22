@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VM | Touch Typing</title>
+    <link rel="stylesheet" href="../assets/css/master.css">
+</head>
+
+<body>
+    <div class="root-wrapper f-col f-center">
+        <div class="target-wrapper f-row f-align-c">
+            <div class="f-col f-center">
+                <p class="fs-13">timer</p>
+                <span id="timer"></span>
+            </div>
+            <div class="f-col f-center">
+                <p class="fs-13">accuracy</p>
+                <span id="accuracy">0 %</span>
+            </div>
+            <div class="f-col f-center">
+                <p class="fs-13">words/min</p>
+                <span id="wpm">0 WPM</span>
+            </div>
+            <div class="f-col f-center">
+                <p class="fs-13">errors</p>
+                <span id="errors">0</span>
+            </div>
+        </div>
+        <div class="test-wrapper f-row f-align-c">
+            <div class="test-cells f-center"></div>
+            <div class="test-cells f-center"></div>
+            <div class="test-cells f-center"></div>
+            <div class="test-cells f-center"></div>
+            <div class="test-cells f-center"></div>
+            <div class="test-cells f-center"></div>
+            <div class="test-cells f-center"></div>
+            <div class="test-cells f-center"></div>
+            <div class="test-cells f-center"></div>
+        </div>
+        <div class="keyboard-wrapper f-col">
+            <div class="k-rows f-row f-align-c f-j-sb">
+                <div class="key f-col f-center">
+                    <span class="shift-key">~</span>
+                    <span class="normal-key">`</span>
+                </div>
+                <div class="key f-col f-center">
+                    <span class="shift-key">!</span>
+                    <span class="normal-key">1</span>
+                </div>
+                <div class="key f-col f-center">
+                    <span class="shift-key">@</span>
+                    <span class="normal-key">2</span>
+                </div>
+                <div class="key f-col f-center">
+                    <span class="shift-key">#</span>
+                    <span class="normal-key">3</span>
+                </div>
+                <div class="key f-col f-center">
+                    <span class="shift-key">$</span>
+                    <span class="normal-key">4</span>
+                </div>
+                <div class="key f-col f-center">
+                    <span class="shift-key">%</span>
+                    <span class="normal-key">5</span>
+                </div>
+                <div class="key f-col f-center">
+                    <span class="shift-key">^</span>
+                    <span class="normal-key">6</span>
+                </div>
+                <div class="key f-col f-center">
+                    <span class="shift-key">&</span>
+                    <span class="normal-key">7</span>
+                </div>
+                <div class="key f-col f-center">
+                    <span class="shift-key">*</span>
+                    <span class="normal-key">8</span>
+                </div>
+                <div class="key f-col f-center">
+                    <span class="shift-key">(</span>
+                    <span class="normal-key">9</span>
+                </div>
+                <div class="key f-col f-center">
+                    <span class="shift-key">)</span>
+                    <span class="normal-key">0</span>
+                </div>
+                <div class="key f-col f-center">
+                    <span class="shift-key">_</span>
+                    <span class="normal-key">-</span>
+                </div>
+                <div class="key f-col f-center">
+                    <span class="shift-key">+</span>
+                    <span class="normal-key">=</span>
+                </div>
+                <div class="key sp-key-r">
+                    <span class="normal-key">
+                        back
+                        <svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M5.75935 6.52382L8.80697 3.47621M5.75935 3.47621L8.80697 6.52382M4.8664 8.80954H10.3308C10.7349 8.80954 11.1225 8.64899 11.4083 8.36322C11.694 8.07745 11.8546 7.68987 11.8546 7.28573V2.7143C11.8546 2.31016 11.694 1.92257 11.4083 1.6368C11.1225 1.35103 10.7349 1.19049 10.3308 1.19049H4.8664C4.46229 1.19058 4.07477 1.35118 3.78906 1.63697L0.964683 4.46135C0.821848 4.60423 0.741608 4.79798 0.741608 5.00001C0.741608 5.20204 0.821848 5.3958 0.964683 5.53868L3.78906 8.36306C4.07477 8.64885 4.46229 8.80945 4.8664 8.80954V8.80954Z"
+                                stroke="currentColor" stroke-width="0.761905" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </span>
+                </div>
+            </div>
+            <div class='k-rows f-row f-align-c f-j-sb'>
+                <div class='key sp-key-l'>
+                    <span class='normal-key'>
+                        tab
+                        <svg width="11" height="9" viewBox="0 0 11 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M2.33163 2.12937H10.0123V2.75914H2.33163L3.35703 3.79727L2.91757 4.24007L1.13535 2.44426L2.91757 0.648438L3.35703 1.09124L2.33163 2.12937ZM0.637299 0.86984V4.01867H0.0122986V0.86984H0.637299ZM6.66757 5.49961L7.10703 5.0568L8.88925 6.85262L7.10703 8.64844L6.66757 8.20563L7.69296 7.1675H0.0122986V6.53774H7.69296L6.66757 5.49961ZM9.3873 8.42704V5.2782H10.0123V8.42704H9.3873Z"
+                                fill="currentColor" />
+                        </svg>
+                    </span>
+                </div>
+                <div class='key k-letter f-center'>
+                    <span class='normal-key'>Q</span>
+                </div>
+                <div class='key k-letter f-center'>
+                    <span class='normal-key'>W</span>
+                </div>
+                <div class='key k-letter f-center'>
+                    <span class='normal-key'>E</span>
+                </div>
+                <div class='key k-letter f-center'>
+                    <span class='normal-key'>R</span>
+                </div>
+                <div class='key k-letter f-center'>
+                    <span class='normal-key'>T</span>
+                </div>
+                <div class='key k-letter f-center'>
+                    <span class='normal-key'>Y</span>
+                </div>
+                <div class='key k-letter f-center'>
+                    <span class='normal-key'>U</span>
+                </div>
+                <div class='key k-letter f-center'>
+                    <span class='normal-key'>I</span>
+                </div>
+                <div class='key k-letter f-center'>
+                    <span class='normal-key'>O</span>
+                </div>
+                <div class='key k-letter f-center'>
+                    <span class='normal-key'>P</span>
+                </div>
+                <div class='key f-col f-center'>
+                    <span class='shift-key'>{</span>
+                    <span class='normal-key'>[</span>
+                </div>
+                <div class='key f-col f-center'>
+                    <span class='shift-key'>}</span>
+                    <span class='normal-key'>]</span>
+                </div>
+                <div class='key  f-col f-center'>
+                    <span class='shift-key'>|</span>
+                    <span class='normal-key'>\</span>
+                </div>
+            </div>
+            <div class='k-rows f-row f-align-c f-j-sb'>
+                <div class='key sp-key-l'>
+                    <span class='normal-key'>
+                        caps lock
+                        <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M5.5503 0.987632C5.6263 0.906456 5.71815 0.841744 5.82017 0.797505C5.92219 0.753265 6.03221 0.730438 6.14341 0.730438C6.25461 0.730438 6.36463 0.753265 6.46665 0.797505C6.56867 0.841744 6.66052 0.906456 6.73652 0.987632L11.8917 6.48814C12.3792 7.0065 12.0103 7.85554 11.2986 7.85554H8.9871V8.66803C8.9871 8.88351 8.9015 9.09017 8.74913 9.24254C8.59676 9.39491 8.3901 9.48051 8.17462 9.48051H4.1122C3.89672 9.48051 3.69006 9.39491 3.53769 9.24254C3.38532 9.09017 3.29972 8.88351 3.29972 8.66803V7.85554H0.987397C0.277288 7.85554 -0.0915792 7.0065 0.394285 6.48732L5.5503 0.987632ZM11.2994 7.04306L6.14341 1.54337L0.987397 7.04306H3.29972C3.51521 7.04306 3.72186 7.12866 3.87423 7.28103C4.0266 7.4334 4.1122 7.64006 4.1122 7.85554V8.66803H8.17462V7.85554C8.17462 7.64006 8.26022 7.4334 8.41259 7.28103C8.56496 7.12866 8.77161 7.04306 8.9871 7.04306H11.2994ZM3.29972 11.1055C3.29972 10.89 3.38532 10.6833 3.53769 10.531C3.69006 10.3786 3.89672 10.293 4.1122 10.293H8.17462C8.3901 10.293 8.59676 10.3786 8.74913 10.531C8.9015 10.6833 8.9871 10.89 8.9871 11.1055V11.918C8.9871 12.1334 8.9015 12.3401 8.74913 12.4925C8.59676 12.6448 8.3901 12.7304 8.17462 12.7304H4.1122C3.89672 12.7304 3.69006 12.6448 3.53769 12.4925C3.38532 12.3401 3.29972 12.1334 3.29972 11.918V11.1055ZM8.17462 11.1055H4.1122V11.918H8.17462V11.1055Z"
+                                fill="currentColor" />
+                        </svg>
+                    </span>
+                </div>
+                <div class='key k-letter f-center'>
+                    <span class='normal-key'>A</span>
+                </div>
+                <div class='key k-letter f-center'>
+                    <span class='normal-key'>S</span>
+                </div>
+                <div class='key k-letter f-center'>
+                    <span class='normal-key'>D</span>
+                </div>
+                <div class='key k-letter f-center'>
+                    <span class='normal-key'>F</span>
+                </div>
+                <div class='key k-letter f-center'>
+                    <span class='normal-key'>G</span>
+                </div>
+                <div class='key k-letter f-center'>
+                    <span class='normal-key'>H</span>
+                </div>
+                <div class='key k-letter f-center'>
+                    <span class='normal-key'>J</span>
+                </div>
+                <div class='key k-letter f-center'>
+                    <span class='normal-key'>K</span>
+                </div>
+                <div class='key k-letter f-center'>
+                    <span class='normal-key'>L</span>
+                </div>
+                <div class='key f-col f-center'>
+                    <span class='shift-key'>:</span>
+                    <span class='normal-key'>;</span>
+                </div>
+                <div class='key f-col f-center'>
+                    <span class='shift-key'>"</span>
+                    <span class='normal-key'>'</span>
+                </div>
+                <div class='key sp-key-r'>
+                    <span class='normal-key'>
+                        enter
+                        <svg width="11" height="13" viewBox="0 0 11 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M4.67105 9.69034H4.22105V10.1403V11.6883L0.941466 8.87718L4.22105 6.06611V7.61402V8.06402H4.67105H6.25C7.71748 8.06402 8.91053 6.87097 8.91053 5.4035V1.11666H10.5368V5.4035C10.5368 7.76971 8.61621 9.69034 6.25 9.69034H4.67105Z"
+                                stroke="currentColor" stroke-width="0.9" />
+                        </svg>
+                    </span>
+                </div>
+            </div>
+            <div class='k-rows f-row f-align-c f-j-sb'>
+                <div class='key sp-key-l'>
+                    <span class='normal-key'>
+                        shift
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M6.42355 1.0992C6.37998 1.04441 6.32462 1.00016 6.26157 0.969745C6.19853 0.939328 6.12943 0.923531 6.05944 0.923531C5.98944 0.923531 5.92034 0.939328 5.8573 0.969745C5.79426 1.00016 5.73889 1.04441 5.69533 1.0992L1.4497 6.45423H3.74049C3.86298 6.45447 3.98041 6.50311 4.0672 6.58955C4.15398 6.67599 4.20309 6.79323 4.20382 6.91571V11.0755H7.91413V6.91664C7.91413 6.8558 7.92616 6.79556 7.94952 6.73939C7.97289 6.68322 8.00713 6.63222 8.05027 6.58934C8.09342 6.54645 8.14462 6.51251 8.20093 6.48948C8.25724 6.46646 8.31754 6.45479 8.37838 6.45515H10.6673L6.42355 1.09828V1.0992ZM4.96711 0.526966C5.0977 0.362444 5.26376 0.229545 5.45291 0.138191C5.64205 0.0468376 5.84939 -0.000610352 6.05944 -0.000610352C6.26949 -0.000610352 6.47682 0.0468376 6.66597 0.138191C6.85511 0.229545 7.02118 0.362444 7.15176 0.526966L11.3955 5.88199C11.8755 6.48838 11.4417 7.37812 10.6673 7.37812H8.84171V11.0755C8.84171 11.5859 8.42637 11.9994 7.91413 11.9994H4.20382C4.08225 11.9996 3.96183 11.9759 3.84942 11.9296C3.73701 11.8833 3.63482 11.8153 3.54869 11.7296C3.46256 11.6438 3.39416 11.5418 3.34742 11.4296C3.30067 11.3174 3.27649 11.1971 3.27624 11.0755V7.37812H1.45063C0.675337 7.37812 0.241544 6.48746 0.722408 5.88292L4.96803 0.526966H4.96711Z"
+                                fill="currentColor" />
+                        </svg>
+                    </span>
+                </div>
+                <div class='key k-letter f-center'>
+                    <span class='normal-key'>Z</span>
+                </div>
+                <div class='key k-letter f-center'>
+                    <span class='normal-key'>X</span>
+                </div>
+                <div class='key k-letter f-center'>
+                    <span class='normal-key'>C</span>
+                </div>
+                <div class='key k-letter f-center'>
+                    <span class='normal-key'>V</span>
+                </div>
+                <div class='key k-letter f-center'>
+                    <span class='normal-key'>B</span>
+                </div>
+                <div class='key k-letter f-center'>
+                    <span class='normal-key'>N</span>
+                </div>
+                <div class='key k-letter f-center'>
+                    <span class='normal-key'>M</span>
+                </div>
+                <div class='key f-col f-center'>
+                    <span class='shift-key'>&lt;</span>
+                    <span class='normal-key'>,</span>
+                </div>
+                <div class='key f-col f-center'>
+                    <span class='shift-key'>&gt;</span>
+                    <span class='normal-key'>.</span>
+                </div>
+                <div class='key f-col f-center'>
+                    <span class='shift-key'>?</span>
+                    <span class='normal-key'>/</span>
+                </div>
+                <div class='key sp-key-r'>
+                    <span class='normal-key'>
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M6.42355 1.0992C6.37998 1.04441 6.32462 1.00016 6.26157 0.969745C6.19853 0.939328 6.12943 0.923531 6.05944 0.923531C5.98944 0.923531 5.92034 0.939328 5.8573 0.969745C5.79426 1.00016 5.73889 1.04441 5.69533 1.0992L1.4497 6.45423H3.74049C3.86298 6.45447 3.98041 6.50311 4.0672 6.58955C4.15398 6.67599 4.20309 6.79323 4.20382 6.91571V11.0755H7.91413V6.91664C7.91413 6.8558 7.92616 6.79556 7.94952 6.73939C7.97289 6.68322 8.00713 6.63222 8.05027 6.58934C8.09342 6.54645 8.14462 6.51251 8.20093 6.48948C8.25724 6.46646 8.31754 6.45479 8.37838 6.45515H10.6673L6.42355 1.09828V1.0992ZM4.96711 0.526966C5.0977 0.362444 5.26376 0.229545 5.45291 0.138191C5.64205 0.0468376 5.84939 -0.000610352 6.05944 -0.000610352C6.26949 -0.000610352 6.47682 0.0468376 6.66597 0.138191C6.85511 0.229545 7.02118 0.362444 7.15176 0.526966L11.3955 5.88199C11.8755 6.48838 11.4417 7.37812 10.6673 7.37812H8.84171V11.0755C8.84171 11.5859 8.42637 11.9994 7.91413 11.9994H4.20382C4.08225 11.9996 3.96183 11.9759 3.84942 11.9296C3.73701 11.8833 3.63482 11.8153 3.54869 11.7296C3.46256 11.6438 3.39416 11.5418 3.34742 11.4296C3.30067 11.3174 3.27649 11.1971 3.27624 11.0755V7.37812H1.45063C0.675337 7.37812 0.241544 6.48746 0.722408 5.88292L4.96803 0.526966H4.96711Z"
+                                fill="currentColor" />
+                        </svg>
+                        shift
+                    </span>
+                </div>
+            </div>
+            <div class='k-rows f-row f-align-c f-j-sb'>
+                <div class='key sp-key-l'>
+                    <span class='normal-key'>ctrl</span>
+                </div>
+                <div class='key sp-key-l'>
+                    <span class='normal-key'>alt</span>
+                </div>
+                <div class='key sp-key-l'>
+                    <span class='normal-key'>cmd</span>
+                </div>
+                <div class='key space-bar'>
+                    <span class='normal-key'></span>
+                </div>
+                <div class='key sp-key-r'>
+                    <span class='normal-key'>cmd</span>
+                </div>
+                <div class='key sp-key-r'>
+                    <span class='normal-key'>alt</span>
+                </div>
+                <div class='key sp-key-r'>
+                    <span class='normal-key'>ctrl</span>
+                </div>
+            </div>
+        </div>
+        <div class="menu-icon f-center">
+            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.5 17H9.5M0 9H20M10.5 1H18.5" stroke="currentColor" />
+            </svg>
+        </div>
+    </div>
+    <div class="result-modal">
+        <div class="modal-header f-row f-align-c f-j-sb">
+            <p class="modal-title">Results</p>
+            <div class="close-results">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                    <path
+                        d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z">
+                    </path>
+                </svg>
+            </div>
+        </div>
+        <div class="modal-body f-col f-center">
+            <div class="results-row f-row f-align-c">
+                <div class="f-center f-col">
+                    <p class="fs-14">Time Taken</p>
+                    <span id="time-results"></span>
+                </div>
+                <div class="f-center f-col">
+                    <p class="fs-14">Accuracy</p>
+                    <span id="accuracy-results"></span>
+                </div>
+            </div>
+            <div class="results-row f-row f-align-c">
+                <div class="f-center f-col">
+                    <p class="fs-14">Speed</p>
+                    <span id="wpm-results"></span>
+                </div>
+                <div class="f-center f-col">
+                    <p class="fs-14">Errors</p>
+                    <span id="errors-results"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="menu-modal">
+        <div class="menu f-col">
+            <div id="home-keys" class="menu-category">
+                <p class="menu-category-title">Home keys</p>
+                <div class="menu-wrapper f-col">
+                    <div class="menu-row-wrapper f-row f-align-c">
+                        <a href="f-j.html" id="f-j" class="menu-row-content f-center f-col card-85">
+                            <span class="menu-title">f and j</span>
+                        </a>
+                        <a href="d-k.html" id="d-k" class="menu-row-content f-center f-col card-85">
+                            <span class="menu-title">d and k</span>
+                        </a>
+                        <a href="s-l.html" id="s-l" class="menu-row-content f-center f-col card-85">
+                            <span class="menu-title">s and l</span>
+                        </a>
+                    </div>
+                    <div class="menu-row-wrapper f-row f-align-c">
+                        <a href="g-h.html" id="g-h" class="menu-row-content f-center f-col card-85">
+                            <span class="menu-title">g and h</span>
+                        </a>
+                        <a href="a-semicolon.html" id="a-semicolon" class="menu-row-content f-center f-col card-85">
+                            <span class="menu-title">a and ;</span>
+                        </a>
+                        <a href="home-keys.html" id="home-keys-all" class="menu-row-content f-center f-col card-85">
+                            <span class="menu-title">All keys</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div id="top-keys" class="menu-category">
+                <p class="menu-category-title">Top keys</p>
+                <div class="menu-wrapper f-col">
+                    <div class="menu-row-wrapper f-row f-align-c">
+                        <a href="q-p.html" id="q-p" class="menu-row-content f-center f-col card-85">
+                            <span class="menu-title">q and p</span>
+                        </a>
+                        <a href="w-o.html" id="w-o" class="menu-row-content f-center f-col card-85">
+                            <span class="menu-title">w and o</span>
+                        </a>
+                        <a href="e-i.html" id="e-i" class="menu-row-content f-center f-col card-85">
+                            <span class="menu-title">e and i</span>
+                        </a>
+                    </div>
+                    <div class="menu-row-wrapper f-row f-align-c">
+                        <a href="r-u.html" id="r-u" class="menu-row-content f-center f-col card-85">
+                            <span class="menu-title">r and u</span>
+                        </a>
+                        <a href="t-y.html" id="t-y" class="menu-row-content f-center f-col card-85">
+                            <span class="menu-title">t and y</span>
+                        </a>
+                        <a href="top-keys.html" id="top-keys-all" class="menu-row-content f-center f-col card-85">
+                            <span class="menu-title">All keys</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div id="bottom-keys" class="menu-category">
+                <p class="menu-category-title">Bottom keys</p>
+                <div class="menu-wrapper f-col">
+                    <div class="menu-row-wrapper f-row f-align-c">
+                        <a href="z-forward-slash.html" id="z-forward-slash" class="menu-row-content f-center f-col card-85">
+                            <span class="menu-title">z and /</span>
+                        </a>
+                        <a href="x-fullstop.html" id="x-fullstop" class="menu-row-content f-center f-col card-85">
+                            <span class="menu-title">x and .</span>
+                        </a>
+                        <a href="c-comma.html" id="c-comma" class="menu-row-content f-center f-col card-85">
+                            <span class="menu-title">c and ,</span>
+                        </a>
+                    </div>
+                    <div class="menu-row-wrapper f-row f-align-c">
+                        <a href="v-m.html" id="v-m" class="menu-row-content f-center f-col card-85">
+                            <span class="menu-title">v and m</span>
+                        </a>
+                        <a href="b-n.html" id="b-n" class="menu-row-content f-center f-col card-85">
+                            <span class="menu-title">b and n</span>
+                        </a>
+                        <a href="bottom-keys.html" id="bottom-keys-all" class="menu-row-content f-center f-col card-85">
+                            <span class="menu-title">All keys</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div id="misc" class="menu-category">
+                <p class="menu-category-title">Miscellaneous</p>
+                <div class="menu-wrapper f-col">
+                    <div class="menu-row-wrapper f-row f-align-c">
+                        <a href="index-fingers.html" id="index-fingers" class="menu-row-content f-center f-col card-85">
+                            <span class="menu-title">index</span>
+                        </a>
+                        <a href="ring-fingers.html" id="ring-fingers" class="menu-row-content f-center f-col card-85">
+                            <span class="menu-title">ring</span>
+                        </a>
+                        <a href="pinky-fingers.html" id="pinky-fingers" class="menu-row-content f-center f-col card-85">
+                            <span class="menu-title">pinky</span>
+                        </a>
+                    </div>
+                    <div class="menu-row-wrapper f-row f-align-c">
+                        <a href="middle-fingers.html" id="middle-fingers" class="menu-row-content f-center f-col card-85">
+                            <span class="menu-title">middle</span>
+                        </a>
+                        <a href="common-1.html" id="common-1" class="menu-row-content f-center f-col active-menu-row-content card-85">
+                            <span class="menu-title">common 1</span>
+                        </a>
+                        <a href="common-2.html" id="common-2" class="menu-row-content f-center f-col card-85">
+                            <span class="menu-title">common 2</span>
+                        </a>
+                    </div>
+                    <div class="menu-row-wrapper f-row f-align-c">
+                        <a href="common-3.html" id="common-3" class="menu-row-content f-center f-col card-85">
+                            <span class="menu-title">common 3</span>
+                        </a>
+                        <a href="common-all.html" id="common-all" class="menu-row-content f-center f-col card-85">
+                            <span class="menu-title">common all</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="overlay"></div>
+    <script src="../assets/js/master.js"></script>
+</body>
+
+</html>
