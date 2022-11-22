@@ -63,57 +63,12 @@ var menu_row_content = document.querySelectorAll(".menu-row-content");
 var test_array = space_array.concat(home_row, top_row, bottom_row, num, other_keys_normal);
 
 function check_current_url (){
-    if (window.location.href == "") {
-        
-    }
-    else if(){
-        
-    }
-    else if(){
-
-    }
-    else if(){
-
-    }
-    else if(){
-
-    }
-    else if(){
-
-    }
-    else if(){
-
-    }
-    else if(){
-
-    }
-    else if(){
-
-    }
-    else if(){
-
-    }
-    else if(){
-
-    }
-    else if(){
-
-    }
-    else if(){
-
-    }
-    else if(){
-
-    }
-    else if(){
-
-    }
-    else if(){
-
+    if (window.location.href == "https://github.com/vmarvine254/touch-typing.github.io/keys/f-j.html") {
+        test_array = space_array.concat(f_j);
     }
 }
 
-
+console.log(window.location.href)
 check_current_url();
 show_timer();
 gen_random_letter(test_array);
