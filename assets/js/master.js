@@ -138,6 +138,9 @@ function check_current_url() {
     else if (window.location.href == "https://vmarvine254.github.io/touch-typing.github.io/keys/z-forward-slash.html") {
         test_array = space_array.concat(z_forward_slash);
     }
+    else if (window.location.href == "https://vmarvine254.github.io/touch-typing.github.io/keys/c-comma.html") {
+        test_array = space_array.concat(c_comma);
+    }
 }
 
 check_current_url();
