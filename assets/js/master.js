@@ -35,6 +35,9 @@ let most_typed_letters_2 = ["i", "r", "u", "l", "c", "m", "d"];
 let most_typed_letters_3 = ["y", "h", "p", "b", "f", "g"];
 let space_array = [""];
 
+let num = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
+let other_keys_normal = ["-", "=", "`", "[", "]", "'", ",", ".", "/", "\\"];
+
 let most_typed_letters = most_typed_letters_1.concat(most_typed_letters_2, most_typed_letters_3);
 
 var test_cells = document.querySelectorAll(".test-cells");
@@ -45,7 +48,7 @@ var time = document.querySelector("#timer");
 
 var overlay = document.querySelector(".overlay");
 
-var chosen_time = 20; // seconds
+var chosen_time = 60; // seconds
 var sec = chosen_time;
 let timer_is_counting = false;
 
@@ -55,40 +58,63 @@ var count_mistake = 0;
 var count_correct = 0;
 var gross_wpm = 0;
 
-var f_j_key = document.getElementById("f-j");
-var d_k_key = document.getElementById("d-k");
-var s_l_key = document.getElementById("s-l");
-var g_h_key = document.getElementById("g-h");
-var a_semicolon_key = document.getElementById("a-semicolon");
-var home_key_all = document.getElementById("home-keys-all");
-
-var q_p_key = document.getElementById("q-p");
-var w_o_key = document.getElementById("w-o");
-var e_i_key = document.getElementById("e-i");
-var r_u_key = document.getElementById("r-u");
-var t_y_key = document.getElementById("t-y");
-var top_key_all = document.getElementById("top-keys-all");
-
-var z_forward_slash_key = document.getElementById("z-forward-slash");
-var x_fullstop_key = document.getElementById("x-fullstop");
-var c_comma_key = document.getElementById("c-comma");
-var v_m_key = document.getElementById("v-m");
-var b_n_key = document.getElementById("b-n");
-var bottom_key_all = document.getElementById("bottom-keys-all");
-
-var index_key = document.getElementById("index-fingers");
-var ring_key = document.getElementById("ring-fingers");
-var pinky_key = document.getElementById("pinky-fingers");
-var middle_key = document.getElementById("middle-fingers");
-var common_1_key = document.getElementById("common-1");
-var common_2_key = document.getElementById("common-2");
-var common_3_key = document.getElementById("common-3");
-var common_all_key = document.getElementById("common-all");
-
 var menu_row_content = document.querySelectorAll(".menu-row-content");
 
-var test_array = space_array.concat(most_typed_letters_1);
+var test_array = space_array.concat(home_row, top_row, bottom_row, num, other_keys_normal);
 
+function check_current_url (){
+    if (window.location.href == "") {
+        
+    }
+    else if(){
+        
+    }
+    else if(){
+
+    }
+    else if(){
+
+    }
+    else if(){
+
+    }
+    else if(){
+
+    }
+    else if(){
+
+    }
+    else if(){
+
+    }
+    else if(){
+
+    }
+    else if(){
+
+    }
+    else if(){
+
+    }
+    else if(){
+
+    }
+    else if(){
+
+    }
+    else if(){
+
+    }
+    else if(){
+
+    }
+    else if(){
+
+    }
+}
+
+
+check_current_url();
 show_timer();
 gen_random_letter(test_array);
 active_key_btn(current_click);
@@ -307,128 +333,3 @@ function menu() {
 }
 
 menu();
-
-function home_row_keys() {
-    test_array = [];
-
-    f_j_active();
-    d_k_active();
-    s_l_active();
-    a_semicolon_active();
-    g_h_active();
-    home_key_all_active();
-}
-
-function f_j_active() {
-    f_j_key.addEventListener("click", () => {
-        test_array = space_array.concat(f_j);
-    })
-}
-
-function d_k_active() {
-    d_k_key.addEventListener("click", () => {
-        test_array = space_array.concat(d_k);
-    })
-}
-function s_l_active() {
-    s_l_key.addEventListener("click", () => {
-        test_array = space_array.concat(s_l);
-    })
-}
-function a_semicolon_active() {
-    f_j_key.addEventListener("click", () => {
-        test_array = space_array.concat(f_j);
-    })
-}
-function g_h_active() {
-    g_h_key.addEventListener("click", () => {
-        test_array = space_array.concat(g_h);
-    })
-}
-function home_key_all_active() {
-    home_key_all.addEventListener("click", () => {
-        test_array = space_array.concat(home_row);
-    })
-}
-
-function top_row_keys() {
-    test_array = [];
-
-    q_p_active();
-    w_o_active();
-    e_i_active();
-    r_u_active();
-    t_y_active();
-    top_key_all_active();
-}
-
-function q_p_active() {
-    q_p_key.addEventListener("click", () => {
-        test_array = space_array.concat(q_p);
-    })
-}
-function w_o_active() {
-    w_o_key.addEventListener("click", () => {
-        test_array = space_array.concat(w_o);
-    })
-}
-function e_i_active() {
-    e_i_key.addEventListener("click", () => {
-        test_array = space_array.concat(e_i);
-    })
-}
-function r_u_active() {
-    r_u_key.addEventListener("click", () => {
-        test_array = space_array.concat(r_u);
-    })
-}
-function t_y_active() {
-    t_y_key.addEventListener("click", () => {
-        test_array = space_array.concat(t_y);
-    })
-}
-function top_key_all_active() {
-    top_key_all.addEventListener("click", () => {
-        test_array = space_array.concat(top_row);
-    })
-}
-
-function bottom_row_keys() {
-    z_forward_slash_active();
-    x_fullstop_slash_active();
-    c_comma_slash_active();
-    v_m_slash_active();
-    b_n_slash_active();
-    bottom_key_all_slash_active();
-}
-
-function z_forward_slash_active() {
-    z_forward_slash_key.addEventListener("click", () => {
-        test_array = space_array.concat(z_forward_slash);
-    })
-}
-function x_fullstop_slash_active() {
-    x_fullstop_key.addEventListener("click", () => {
-        test_array = space_array.concat(x_fullstop);
-    })
-}
-function c_comma_slash_active() {
-    c_comma_key.addEventListener("click", () => {
-        test_array = space_array.concat(c_comma);
-    })
-}
-function v_m_slash_active() {
-    v_m_key.addEventListener("click", () => {
-        test_array = space_array.concat(v_m);
-    })
-}
-function b_n_slash_active() {
-    b_n_key.addEventListener("click", () => {
-        test_array = space_array.concat(b_n);
-    })
-}
-function bottom_key_all_slash_active() {
-    bottom_key_all.addEventListener("click", () => {
-        test_array = space_array.concat(bottom_row);
-    })
-}
