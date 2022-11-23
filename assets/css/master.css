@@ -1,9 +1,10 @@
 :root {
     --font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    --color-f1f1f1: #f1f1f1;
+    --color-dddddd: #dddddd;
+    --color-eeeeee: #eeeeee;
     --color-000000: #000000;
     --color-ffffff: #ffffff;
-    --color-f9f9f9: #f9f9f9;
+    --color-f1f1f1: #f1f1f1;
     --color-555555: #555555;
     --color-222222: #222222;
     --color-999999: #999999;
@@ -13,10 +14,11 @@
 }
 
 .light-mode {
-    --color-f1f1f1: #444444;
+    --color-dddddd: #444444;
+    --color-eeeeee: #222222;
     --color-000000: #ffffff;
     --color-ffffff: #111111;
-    --color-f9f9f9: #333333;
+    --color-f1f1f1: #222222;
     --color-555555: #dddddd;
     --color-222222: #eeeeee;
     --color-e6e6e6: #444444;
@@ -122,10 +124,10 @@ a {
 .target-wrapper>div {
     width: 100%;
     height: 130px;
-    background: var(--color-f9f9f9);
+    background: var(--color-f1f1f1);
     color: var(--color-555555);
     border-radius: 10px;
-    border: 1px solid var(--color-f1f1f1);
+    border: 1px solid var(--color-dddddd);
 }
 
 .target-wrapper>div>span {
@@ -144,9 +146,9 @@ a {
 .test-cells {
     width: 100%;
     height: 80px;
-    background: var(--color-f9f9f9);
+    background: var(--color-f1f1f1);
     border-radius: 10px;
-    border: 1px solid var(--color-f1f1f1);
+    border: 1px solid var(--color-dddddd);
     color: var(--color-000000);
     font-size: 2.4rem;
 }
@@ -154,9 +156,9 @@ a {
 .keyboard-wrapper {
     width: 100%;
     height: max-content;
-    background: var(--color-f9f9f9);
+    background: var(--color-f1f1f1);
     border-radius: 20px;
-    border: 1px solid var(--color-f1f1f1);
+    border: 1px solid var(--color-dddddd);
     padding: 25px 20px;
 }
 
@@ -175,7 +177,7 @@ a {
     color: var(--color-555555);
     border-radius: 8px;
     font-size: 13px;
-    border: 1px solid var(--color-f1f1f1);
+    border: 1px solid var(--color-dddddd);
 }
 
 .key:not(:last-child) {
@@ -220,6 +222,8 @@ a {
     align-items: flex-end;
     padding-left: 8px;
     padding-bottom: 8px;
+    text-transform: capitalize;
+    background: var(--color-eeeeee);
 }
 
 .sp-key-r {
@@ -228,6 +232,8 @@ a {
     justify-content: flex-end;
     padding-right: 8px;
     padding-bottom: 8px;
+    text-transform: capitalize;
+    background: var(--color-eeeeee);
 }
 
 .shift-key {
@@ -289,8 +295,8 @@ a {
     width: 40px;
     height: 40px;
     border-radius: 10px;
-    background: var(--color-f9f9f9);
-    border: 1px solid var(--color-f1f1f1);
+    background: var(--color-f1f1f1);
+    border: 1px solid var(--color-dddddd);
     color: var(--color-000000);
     position: fixed;
     right: 50px;
@@ -302,8 +308,8 @@ a {
     width: 40px;
     height: 40px;
     border-radius: 10px;
-    background: var(--color-f9f9f9);
-    border: 1px solid var(--color-f1f1f1);
+    background: var(--color-f1f1f1);
+    border: 1px solid var(--color-dddddd);
     color: var(--color-000000);
     position: fixed;
     right: 50px;
@@ -332,7 +338,7 @@ a {
 .correct-cell {
     background: transparent;
     color: var(--color-000000);
-    border-color: var(--color-f1f1f1);
+    border-color: var(--color-dddddd);
 }
 
 .result-modal {
@@ -355,7 +361,7 @@ a {
 .result-modal .modal-header {
     height: 55px;
     padding: 0px 30px;
-    border-bottom: 1px solid var(--color-f1f1f1);
+    border-bottom: 1px solid var(--color-dddddd);
 }
 
 .modal-title {
@@ -382,8 +388,8 @@ a {
 }
 
 .result-modal .results-row>div {
-    background: var(--color-f9f9f9);
-    border: 1px solid var(--color-f1f1f1);
+    background: var(--color-f1f1f1);
+    border: 1px solid var(--color-dddddd);
     width: 100%;
     height: 100%;
     border-radius: 10px;
@@ -417,7 +423,7 @@ a {
     width: 90px;
     height: 90px;
     border-radius: 10px;
-    border: 1px solid var(--color-f1f1f1);
+    border: 1px solid var(--color-dddddd);
 }
 
 .menu {
@@ -473,7 +479,7 @@ a {
 
 .menu-row-content:not(.active-menu-row-content):hover {
     border: none;
-    background: var(--color-f9f9f9);
+    background: var(--color-f1f1f1);
 }
 
 .menu-row-wrapper .menu-row-content:not(:first-child) {
