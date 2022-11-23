@@ -69,82 +69,82 @@ var menu_row_content = document.querySelectorAll(".menu-row-content");
 var test_array = space_array.concat(home_row, top_row, bottom_row, num, other_keys_normal);
 
 function check_current_url() {
-    if (window.location.pathname == "/touch-typing.github.io/keys/f-j.html") {
+    if (window.location.pathname == "https://vmarvine254.github.io/touch-typing.github.io/keys/f-j.html") {
         test_array = space_array.concat(f_j);
     }
-    else if (window.location.pathname == "/touch-typing.github.io/keys/a-semicolon.html") {
+    else if (window.location.pathname == "https://vmarvine254.github.io/touch-typing.github.io/keys/a-semicolon.html") {
         test_array = space_array.concat(a_semicolon);
     }
-    else if (window.location.pathname == "/touch-typing.github.io/keys/b-n.html") {
+    else if (window.location.pathname == "https://vmarvine254.github.io/touch-typing.github.io/keys/b-n.html") {
         test_array = space_array.concat(b_n);
     }
-    else if (window.location.pathname == "/touch-typing.github.io/keys/bottom-keys.html") {
+    else if (window.location.pathname == "https://vmarvine254.github.io/touch-typing.github.io/keys/bottom-keys.html") {
         test_array = space_array.concat(bottom_row);
     }
-    else if (window.location.pathname == "/touch-typing.github.io/keys/common-1.html") {
+    else if (window.location.pathname == "https://vmarvine254.github.io/touch-typing.github.io/keys/common-1.html") {
         test_array = space_array.concat(most_typed_letters_1);
     }
-    else if (window.location.pathname == "/touch-typing.github.io/keys/common-2.html") {
+    else if (window.location.pathname == "https://vmarvine254.github.io/touch-typing.github.io/keys/common-2.html") {
         test_array = space_array.concat(most_typed_letters_2);
     }
-    else if (window.location.pathname == "/touch-typing.github.io/keys/common-3.html") {
+    else if (window.location.pathname == "https://vmarvine254.github.io/touch-typing.github.io/keys/common-3.html") {
         test_array = space_array.concat(most_typed_letters_3);
     }
-    else if (window.location.pathname == "/touch-typing.github.io/keys/common-all.html") {
+    else if (window.location.pathname == "https://vmarvine254.github.io/touch-typing.github.io/keys/common-all.html") {
         test_array = space_array.concat(most_typed_letters);
     }
-    else if (window.location.pathname == "/touch-typing.github.io/keys/d-k.html") {
+    else if (window.location.pathname == "https://vmarvine254.github.io/touch-typing.github.io/keys/d-k.html") {
         test_array = space_array.concat(d_k);
     }
-    else if (window.location.pathname == "/touch-typing.github.io/keys/e-i.html") {
+    else if (window.location.pathname == "https://vmarvine254.github.io/touch-typing.github.io/keys/e-i.html") {
         test_array = space_array.concat(e_i);
     }
-    else if (window.location.pathname == "/touch-typing.github.io/keys/g-h.html") {
+    else if (window.location.pathname == "https://vmarvine254.github.io/touch-typing.github.io/keys/g-h.html") {
         test_array = space_array.concat(g_h);
     }
-    else if (window.location.pathname == "/touch-typing.github.io/keys/home-keys.html") {
+    else if (window.location.pathname == "https://vmarvine254.github.io/touch-typing.github.io/keys/home-keys.html") {
         test_array = space_array.concat(home_row);
     }
-    else if (window.location.pathname == "/touch-typing.github.io/keys/index-fingers.html") {
+    else if (window.location.pathname == "https://vmarvine254.github.io/touch-typing.github.io/keys/index-fingers.html") {
         test_array = space_array.concat(index_finger);
     }
-    else if (window.location.pathname == "/touch-typing.github.io/keys/middle-fingers.html") {
+    else if (window.location.pathname == "https://vmarvine254.github.io/touch-typing.github.io/keys/middle-fingers.html") {
         test_array = space_array.concat(middle_finger);
     }
-    else if (window.location.pathname == "/touch-typing.github.io/keys/pinky-fingers.html") {
+    else if (window.location.pathname == "https://vmarvine254.github.io/touch-typing.github.io/keys/pinky-fingers.html") {
         test_array = space_array.concat(pinky_finger);
     }
-    else if (window.location.pathname == "/touch-typing.github.io/keys/q-p.html") {
+    else if (window.location.pathname == "https://vmarvine254.github.io/touch-typing.github.io/keys/q-p.html") {
         test_array = space_array.concat(q_p);
     }
-    else if (window.location.pathname == "/touch-typing.github.io/keys/r-u.html") {
+    else if (window.location.pathname == "https://vmarvine254.github.io/touch-typing.github.io/keys/r-u.html") {
         test_array = space_array.concat(r_u);
     }
-    else if (window.location.pathname == "/touch-typing.github.io/keys/ring-fingers.html") {
+    else if (window.location.pathname == "https://vmarvine254.github.io/touch-typing.github.io/keys/ring-fingers.html") {
         test_array = space_array.concat(ring_finger);
     }
-    else if (window.location.pathname == "/touch-typing.github.io/keys/s-l.html") {
+    else if (window.location.pathname == "https://vmarvine254.github.io/touch-typing.github.io/keys/s-l.html") {
         test_array = space_array.concat(s_l);
     }
-    else if (window.location.pathname == "/touch-typing.github.io/keys/t-y.html") {
+    else if (window.location.pathname == "https://vmarvine254.github.io/touch-typing.github.io/keys/t-y.html") {
         test_array = space_array.concat(t_y);
     }
-    else if (window.location.pathname == "/touch-typing.github.io/keys/top-keys.html") {
+    else if (window.location.pathname == "https://vmarvine254.github.io/touch-typing.github.io/keys/top-keys.html") {
         test_array = space_array.concat(top_row);
     }
-    else if (window.location.pathname == "/touch-typing.github.io/keys/v-m.html") {
+    else if (window.location.pathname == "https://vmarvine254.github.io/touch-typing.github.io/keys/v-m.html") {
         test_array = space_array.concat(v_m);
     }
-    else if (window.location.pathname == "/touch-typing.github.io/keys/w-o.html") {
+    else if (window.location.pathname == "https://vmarvine254.github.io/touch-typing.github.io/keys/w-o.html") {
         test_array = space_array.concat(w_o);
     }
-    else if (window.location.pathname == "/touch-typing.github.io/keys/x-fullstop.html") {
+    else if (window.location.pathname == "https://vmarvine254.github.io/touch-typing.github.io/keys/x-fullstop.html") {
         test_array = space_array.concat(x_fullstop);
     }
-    else if (window.location.pathname == "/touch-typing.github.io/keys/z-forward-slash.html") {
+    else if (window.location.pathname == "https://vmarvine254.github.io/touch-typing.github.io/keys/z-forward-slash.html") {
         test_array = space_array.concat(z_forward_slash);
     }
-    else if (window.location.pathname == "/touch-typing.github.io/keys/c-comma.html") {
+    else if (window.location.pathname == "https://vmarvine254.github.io/touch-typing.github.io/keys/c-comma.html") {
         test_array = space_array.concat(c_comma);
     }
 }
