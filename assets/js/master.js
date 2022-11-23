@@ -215,7 +215,7 @@ function listener() {
 
     }
 
-    let key_press = event.key;
+    let key_press = event.key.toLowerCase();
 
     check_key_press(key_press, chosen_key);
     chosen_key.classList.remove("chosen");
