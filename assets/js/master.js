@@ -48,6 +48,12 @@ var time = document.querySelector("#timer");
 
 var overlay = document.querySelector(".overlay");
 
+let capital_letters = [];
+
+for (let i = 0; i < letters.length; i++) {
+    capital_letters[i] = letters[i].innerText.toUpperCase();
+}
+
 var chosen_time = 60; // seconds
 var sec = chosen_time;
 let timer_is_counting = false;
@@ -191,7 +197,25 @@ function listener() {
     timer_is_counting = true;
 
     let chosen_key = document.querySelector(".chosen");
-    let key_press = event.key.toLowerCase();
+
+    // check capslock press
+    if (event.getModifierState("CapsLock")) {
+
+    }
+    // check shift key
+    if (event.getModifierState("Shift")) {
+
+    }
+    // check enter key
+    if (event.key === "Enter") {
+
+    }
+    // check tab key
+    if (event.key === "Tab") {
+
+    }
+
+    let key_press = event.key;
 
     check_key_press(key_press, chosen_key);
     chosen_key.classList.remove("chosen");
