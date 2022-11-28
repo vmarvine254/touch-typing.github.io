@@ -38,7 +38,7 @@ let space_array = [""];
 let num = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
 let other_keys_normal = ["-", "=", "`", "[", "]", "'", ",", ".", "/", "\\"];
 
-let most_typed_letters = most_typed_letters_1.concat(most_typed_letters_2, most_typed_letters_3);
+let most_typed_letters = most_typed_letters_1.concat(most_typed_letters_2, most_typed_letters_3, ["j", "k", "q", "v", "w", "x", "z"]);
 
 var test_cells = document.querySelectorAll(".test-cells");
 var letters = document.querySelectorAll(".k-letter");
